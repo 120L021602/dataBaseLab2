@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>用户列表</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>goodsid</th>
+                <th>gname</th>
+                <th>warehouseid</th>
+                <th>price</th>
+                <th>catname</th>
+                <th>supplierid</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in data_list%}
+            <tr>
+                <td>{{item.goodsid}}</td>
+                <td>{{item.gname}}</td>
+                <td>{{item.warehouseid}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.catname}}</td>
+                <td>{{item.supplierid}}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+</html>

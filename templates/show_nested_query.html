@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>嵌套查询：查询没有下订单的客户</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>customerid</th>
+                <th>cname</th>
+                <th>gender</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in data_list%}
+            <tr>
+                <td>{{item.customerid}}</td>
+                <td>{{item.cname}}</td>
+                <td>{{item.gender}}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+</html>

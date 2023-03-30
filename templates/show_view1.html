@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>顾客订单视图(CustomerOrderView)：显示所有的的订单信息（隐去用户信息），包括订单ID、下单时间、总价。</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>orderid</th>
+                <th>ordertime</th>
+                <th>totalprice</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in data_list%}
+            <tr>
+                <td>{{item.orderid}}</td>
+                <td>{{item.ordertime}}</td>
+                <td>{{item.totalprice}}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+</html>
